@@ -1,6 +1,6 @@
 # Reel GitHub Action
 
-Container security scanning for GitHub Actions — SBOM generation, vulnerability scanning (SARIF → GitHub Code Scanning), cryptographic bill of materials, and malware detection. Powered by the [Reel CLI](https://github.com/getreeldev/releases).
+Container security scanning for GitHub Actions — SBOM generation, vulnerability scanning (SARIF → GitHub Code Scanning), cryptographic bill of materials, and malware detection. Powered by the [Reel CLI](https://github.com/getreeldev/reel-cli).
 
 ## Usage
 
@@ -73,7 +73,7 @@ Each run appends a readable markdown summary to the Actions run page (`$GITHUB_S
 
 ## Related
 
-- **Reel CLI binaries & changelog**: [`getreeldev/releases`](https://github.com/getreeldev/releases)
+- **Reel CLI binaries & changelog**: [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli)
 - **Helm chart**: [`getreeldev/helm`](https://github.com/getreeldev/helm)
 - **Full documentation**: [getreel.dev/docs](https://getreel.dev/docs)
 - **GitHub Action docs**: [getreel.dev/docs/github-action](https://getreel.dev/docs/github-action)

@@ -60,9 +60,9 @@ runs:
       shell: bash
       run: |
         if [ "${{ inputs.reel-version }}" = "latest" ]; then
-          URL="https://github.com/getreeldev/releases/releases/latest/download/reel_linux_amd64.tar.gz"
+          URL="https://github.com/getreeldev/reel-cli/releases/latest/download/reel_linux_amd64.tar.gz"
         else
-          URL="https://github.com/getreeldev/releases/releases/download/${{ inputs.reel-version }}/reel_linux_amd64.tar.gz"
+          URL="https://github.com/getreeldev/reel-cli/releases/download/${{ inputs.reel-version }}/reel_linux_amd64.tar.gz"
         fi
         curl -sL "$URL" | tar xz
         sudo mv reel /usr/local/bin/

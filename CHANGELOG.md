@@ -1,12 +1,10 @@
 # Changelog
 
-All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/releases`](https://github.com/getreeldev/releases/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
-
-Prior to v1.5.0 this Action lived in `getreeldev/releases` and shared a single unified changelog covering both CLI and Action; that history is preserved at [`getreeldev/releases/CHANGELOG.old`](https://github.com/getreeldev/releases/blob/main/CHANGELOG.old).
+All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
 ## v1.5.0
 
-No Action-specific changes. Released alongside Reel CLI v1.5.0, which adds VEX support via `--scanners vex` on `reel export sbom`. To opt in from the Action, pass `scanners: vuln,vex`:
+No Action-specific changes. Released alongside Reel CLI v1.5.0, which adds VEX support via `--scanners vex` on `reel export sbom`. Opt in from the Action by passing `scanners: vuln,vex`:
 
 ```yaml
 - uses: getreeldev/reel-action@v1
@@ -17,13 +15,6 @@ No Action-specific changes. Released alongside Reel CLI v1.5.0, which adds VEX s
 ```
 
 Vendor `not_affected` CVEs land in GitHub Code Scanning as pre-dismissed findings via SARIF suppressions.
-
-This release also marks the **split of the Action out of `getreeldev/releases` into its own repo**. Update existing workflows:
-
-```diff
-- uses: getreeldev/releases@v1
-+ uses: getreeldev/reel-action@v1
-```
 
 ## v1.4.0
 
@@ -65,4 +56,4 @@ Two new pass-through inputs surface CLI flags that landed on the reel side, plus
 
 ## v1.1.0 and earlier
 
-Initial GitHub Action releases. See [`getreeldev/releases/CHANGELOG.old`](https://github.com/getreeldev/releases/blob/main/CHANGELOG.old) for full prior history.
+Initial GitHub Action releases.
