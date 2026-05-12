@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.6.0
+
+No Action-specific changes. Released alongside Reel CLI v1.6.0, which adds the `--socket` flag, actionable runtime-detection errors, and VEX annotation in the scheduler — and tightens the scheduler verb namespace (`export` = local, `upload` = S3). See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for migration details if your `reel.io/schedule` annotations use `export X --s3-bucket`. No `action.yml` changes required.
+
 ## v1.5.3
 
 No Action-specific changes. Released alongside Reel CLI v1.5.3, which fixes a release-pipeline issue where the CLI binary inside the agent container image reported `-rc.N` instead of the GA version — see the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required; tarball downloads consumed by the Action are unchanged.
