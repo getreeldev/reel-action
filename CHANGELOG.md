@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.5.3
+
+No Action-specific changes. Released alongside Reel CLI v1.5.3, which fixes a release-pipeline issue where the CLI binary inside the agent container image reported `-rc.N` instead of the GA version — see the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required; tarball downloads consumed by the Action are unchanged.
+
 ## v1.5.2
 
 No Action-specific changes. Released alongside Reel CLI v1.5.2, which ships three CLI quality-of-life fixes (`schedule` compact table, `license` duration humanization, `status` capabilities → features rewording). See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
