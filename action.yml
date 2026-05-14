@@ -12,7 +12,7 @@ inputs:
     description: 'SBOM format: cyclonedx, spdx, spdx-json'
     default: 'cyclonedx'
   scanners:
-    description: 'Trivy scanners: vuln,secret,license,config,all (comma-separated)'
+    description: 'Scanners: vuln,secret,license,config,all (Trivy-native) or vex (reel pseudo-scanner: POSTs the SBOM/SARIF to vex.getreel.dev and merges vendor VEX statements; auto-enables vuln). Comma-separated.'
     default: 'vuln'
   severity:
     description: 'Trivy severity filter: LOW,MEDIUM,HIGH,CRITICAL (comma-separated)'
