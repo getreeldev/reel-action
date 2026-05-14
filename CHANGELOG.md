@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.7.1
+
+No Action-specific changes. Released alongside Reel CLI v1.7.1, which adds a stdout pipe-keepalive shim so `reel export sbom|sarif|cbom` survives downstream stdin-readiness timeouts (e.g. piping to `claude`). The Action writes to files via `-o`, not stdout, so this change is transparent. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
+
 ## v1.7.0
 
 No Action-specific changes. Released alongside Reel CLI v1.7.0, which overhauls CRIU detection and installation (segfault fixes, marker-file capability contract, source-aware status reporting). All changes are agent/runtime-side; the standalone Action's image-scan path is unaffected. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
