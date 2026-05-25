@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.8.0
+
+No Action-specific changes. Released alongside Reel CLI v1.8.0, which routes `reel --agent upload <artifact>` commands through the agent's new HTTP upload endpoints (the agent server now owns S3 talk end-to-end). The Action's standalone image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details, including the scheduler-only breaking change for `reel.io/schedule` annotations that use the `export` verb. No `action.yml` changes required.
+
 ## v1.7.2
 
 No Action-specific changes. Released alongside Reel CLI v1.7.2, which closes a host-file overwrite vulnerability in tar extraction reachable via `reel export malware --image` and `reel export cbom --image` on untrusted images, extends the v1.7.1 pipe-keepalive shim to four more export commands, and consolidates tar extraction to a single hardened implementation. The Action writes outputs to files via `-o`, so the pipe-keepalive change is transparent. The security fix applies to any Action invocation that scans untrusted images — upgrading is recommended. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
