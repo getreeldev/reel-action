@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.9.0
+
+No Action-specific changes. Released alongside Reel CLI v1.9.0, which adds a standalone MCP server (`reel start mcp`) for AI-client use on developer laptops. The Action's image-scan workflow (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
+
 ## v1.8.0
 
 No Action-specific changes. Released alongside Reel CLI v1.8.0, which routes `reel --agent upload <artifact>` commands through the agent's new HTTP upload endpoints (the agent server now owns S3 talk end-to-end). The Action's standalone image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details, including the scheduler-only breaking change for `reel.io/schedule` annotations that use the `export` verb. No `action.yml` changes required.
