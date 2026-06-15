@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.10.0
+
+No Action-specific changes. Released alongside Reel CLI v1.10.0, which repoints agent telemetry to a live endpoint (PostHog) with a privacy-vetted metering heartbeat, reframes the no-license grace period (3-hour in-memory grace; the real evaluation is a free 30-day issued license), and fixes checkpoint/layer/frame/memory uploads to S3. The Action's image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
+
 ## v1.9.1
 
 No Action-specific changes. Released alongside Reel CLI v1.9.1, which binds the in-cluster agent's HTTP API to localhost by default, removes `reel upload sarif`, and fixes IPv6 rendering in volatile dumps. The Action's image-scan path (`reel export sarif --image …`) is untouched — only the agent-side `upload sarif` was removed. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
