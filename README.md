@@ -2,6 +2,8 @@
 
 Container security scanning for GitHub Actions — SBOM, vulnerability scanning (SARIF → GitHub Code Scanning), VEX annotation, cryptographic bill of materials, and malware detection. Powered by the [Reel CLI](https://github.com/getreeldev/reel-cli).
 
+Runs on `amd64` and `arm64` Linux runners — the runner architecture is auto-detected.
+
 ## Usage
 
 ```yaml
