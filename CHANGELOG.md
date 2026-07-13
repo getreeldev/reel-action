@@ -2,6 +2,10 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
+## v1.11.1
+
+No Action-specific changes. Released alongside Reel CLI v1.11.1, which fixes CBOM crypto-classification bugs (TLS 1.2/1.3 and ECDSA no longer mislabeled deprecated, weak RSA keys now flagged, real SSH key sizes read from the key) and hardens the CBOM scanner. The Action's image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
+
 ## v1.11.0
 
 The Action now detects the runner architecture (`uname -m`) and downloads the matching CLI tarball, so it works on arm64 Linux runners (Graviton, Ampere) as well as amd64. Unsupported architectures fail with a clear error instead of installing a binary that won't run. Released alongside Reel CLI v1.11.0, which adds arm64 Linux support across standalone and agent mode. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details.
