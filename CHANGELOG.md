@@ -2,9 +2,9 @@
 
 All notable changes to the Reel GitHub Action are documented here. CLI changes live in [`getreeldev/reel-cli`](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md); Helm chart changes live in [`getreeldev/helm`](https://github.com/getreeldev/helm/blob/main/CHANGELOG.md).
 
-## v1.11.1
+## v1.11.2
 
-No Action-specific changes. Released alongside Reel CLI v1.11.1, which fixes CBOM crypto-classification bugs (TLS 1.2/1.3 and ECDSA no longer mislabeled deprecated, weak RSA keys now flagged, real SSH key sizes read from the key), hardens the CBOM scanner, and bakes a baseline ClamAV signature database into the agent's malware-scanner sidecar so scans work on a fresh node even when ClamAV's CDN is rate-limited. The Action's image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
+No Action-specific changes. Released alongside Reel CLI v1.11.2, which fixes CBOM crypto-classification bugs (TLS 1.2/1.3 and ECDSA no longer mislabeled deprecated, weak RSA keys now flagged, real SSH key sizes read from the key), hardens the CBOM scanner, and overhauls in-cluster malware scanning (baked-in ClamAV DB, fd-passing to the daemon, and fail-loud when the scanner is unavailable). The Action's image-scan path (`reel export sarif --image …`) is untouched. See the [CLI changelog](https://github.com/getreeldev/reel-cli/blob/main/CHANGELOG.md) for details. No `action.yml` changes required.
 
 ## v1.11.0
 
